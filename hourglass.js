@@ -32,6 +32,7 @@ function hourglassSum(arr) {
   //    }
   //    we've hit the bottom, time to return
   // }
+  
 }
 
 const grid = [[ 1, 1, 1, 0, 0, 0 ],
