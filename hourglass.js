@@ -1,3 +1,5 @@
+// https://www.hackerrank.com/challenges/2d-array/problem
+
 function hourglassSum(arr) {
   // psuedo code at bottom
   let hourglassSums = [];
@@ -19,19 +21,6 @@ function hourglassSum(arr) {
     }
   }
   return Math.max(...hourglassSums);
-  // define hourglass shape
-  // hourglass = arr[y][x], arr[y][x+1], arr[y][x+2]
-  //                        arr[y+1][x+1]
-  //           arr[y+2][x], arr[y+2][x+1], arr[y+2][x+2]
-  // account for boundaries
-  // if arr[y+2] {
-  //    if arr[x+2] {
-  //      sum hourglass
-  //    } else {
-  //      we've hit the edge, move down a line
-  //    }
-  //    we've hit the bottom, time to return
-  // }
 }
 
 const grid = [[ 1, 1, 1, 0, 0, 0 ],
@@ -41,3 +30,17 @@ const grid = [[ 1, 1, 1, 0, 0, 0 ],
               [ 0, 0, 0, 2, 0, 0 ],
               [ 0, 0, 1, 2, 4, 0 ]]
 hourglassSum(grid);
+
+// define hourglass shape
+// hourglass = arr[y][x], arr[y][x+1], arr[y][x+2]
+//                        arr[y+1][x+1]
+//           arr[y+2][x], arr[y+2][x+1], arr[y+2][x+2]
+// account for boundaries
+// if arr[y+2] {
+//    if arr[x+2] {
+//      sum hourglass
+//    } else {
+//      we've hit the edge, move down a line
+//    }
+//    we've hit the bottom, time to return
+// }
